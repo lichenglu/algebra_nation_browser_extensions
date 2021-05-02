@@ -1,25 +1,40 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "name": "Algebra Nation Enhancement",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+      "default_popup": "index.html"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'; connect-src * data: blob: 'unsafe-inline';",
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "matches": [
+        "https://web.algebranation.com/*",
+        "http://web.algebranation.com/*"
+      ],
+      "js": [
+        "/static/js/0.chunk.js",
+        "/static/js/1.chunk.js",
+        "/static/js/2.chunk.js",
+        "/static/js/content.chunk.js",
+        "/static/js/runtime-content.js"
+      ],
+      "run_at": "document_end"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background": {
+    "scripts": [
+      "/app/on-change-2.2.3.js",
+      "/app/background.js",
+      "hot-reload.js"
+    ]
+  },
+  // https://stackoverflow.com/a/52133604
+  "web_accessible_resources": [
+    "static/media/*.png",
+    "static/media/*.svg"
+  ],
+  "permissions": [
+    "storage"
+  ]
 }

@@ -1,0 +1,17 @@
+/* src/content.css */
+.my-extension {
+    border-radius: 50%;
+    position: fixed;
+    bottom: 36px;
+    right: 36px;
+    z-index: 9999;
+
+    img {
+        cursor: pointer;
+        width: 64px;
+        height: 64px;
+    }
+ }
+ .my-extension h1 {
+     color: #000;
+ }

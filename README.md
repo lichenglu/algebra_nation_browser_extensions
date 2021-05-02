@@ -44,3 +44,20 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Extension Notes
+
+[How to create a chrome extension using React](https://itnext.io/create-chrome-extension-with-reactjs-using-inject-page-strategy-137650de1f39)
+
+[Github template](https://github.com/satendra02/react-chrome-extension)
+
+[How to set up content injection using the CRA v.4](https://github.com/satendra02/react-chrome-extension/issues/2#issuecomment-726434929)
+
+[Extension Hot-reload step 1 - watch & rebuild](https://smellycode.com/chrome-extension-live-reloading-with-react/)
+
+[Extension Hot-reload step 2 - reload extension](https://github.com/satendra02/react-chrome-extension/issues/8)
+
+
+
+
+

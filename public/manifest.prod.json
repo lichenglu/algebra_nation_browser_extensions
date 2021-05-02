@@ -1,0 +1,30 @@
+{
+  "name": "Algebra Nation Enhancement",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.algebranation.com/*",
+        "http://web.algebranation.com/*"
+      ],
+      "css": ["/static/css/main.chunk.css", "/static/css/content.chunk.css"],
+      "js": [
+        "/static/js/0.chunk.js",
+        "/static/js/5.chunk.js",
+        "/static/js/content.chunk.js",
+        "/static/js/runtime-content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["/app/background.js", "hot-reload.js"]
+  },
+  // https://stackoverflow.com/a/52133604
+  "web_accessible_resources": ["static/media/*.png", "static/media/*.svg"]
+}
